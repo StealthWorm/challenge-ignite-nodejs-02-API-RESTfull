@@ -185,17 +185,6 @@ export async function dietRoutes(app: FastifyInstance) {
         .where('in_diet', true)
         .first()
 
-      // const bestSequenceDay = await knex('meals')
-      //   .select(
-      //     knex.raw(
-      //       'date_hour, array_agg(id order by created_at asc) as sequence',
-      //     ),
-      //   )
-      //   .where('in_diet', true)
-      //   .andWhere('session_id', sessionId)
-      //   .groupBy('id')
-      // .orderBy('id', 'asc')
-
       const metrics = {
         totalMeals,
         totalMealsInDiet,
